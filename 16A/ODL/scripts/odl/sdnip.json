@@ -1,0 +1,44 @@
+{
+    "bgpPeers" : [
+        {
+            "attachmentDpid" : "00:00:00:00:00:00:00:01",
+	    	"attachmentPort" : "1",
+            "ipAddress" : "192.168.10.1"
+        },
+		{
+            "attachmentDpid" : "00:00:00:00:00:00:00:01",
+	    	"attachmentPort" : "2",
+            "ipAddress" : "192.168.20.1"
+        },
+		{
+            "attachmentDpid" : "00:00:00:00:00:00:00:01",
+	    	"attachmentPort" : "3",
+            "ipAddress" : "192.168.40.1"
+        }
+    ],
+    "bgpSpeakers" : [
+        {
+            "name" : "Speaker1",
+            "attachmentDpid" : "00:00:00:00:00:00:00:aa",
+            "attachmentPort" : "1",
+            "macAddress" : "aa:bb:cc:dd:ee:ff",
+            "interfaceAddresses" : [
+                {
+		    		"interfaceDpid" : "00:00:00:00:00:00:00:01",
+		    		"interfacePort" : "1",
+                    "ipAddress" : "192.168.10.101"
+                },
+                {
+		    		"interfaceDpid" : "00:00:00:00:00:00:00:01",
+		    		"interfacePort" : "2",
+                    "ipAddress" : "192.168.20.101"
+                },
+                {
+		    		"interfaceDpid" : "00:00:00:00:00:00:00:01",
+		    		"interfacePort" : "3",
+                    "ipAddress" : "192.168.40.101"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+{
+ "devices": [{ "alias": "s1", "uri": "of:0000000011223344", "annotations": { "driver": "ofdpa"}, "type": "SWITCH" }
+	     ]
+}
