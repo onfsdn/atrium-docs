@@ -1,0 +1,9 @@
+# fabric cell for local controller without host learning
+
+export ONOS_NIC=127.0.0.*
+export OC1="127.0.0.1"
+export OCN="127.0.0.1"
+export OCI=${OC1}
+export ONOS_USER=admin
+export ONOS_GROUP=admin
+export ONOS_APPS="drivers,openflow,segmentrouting"

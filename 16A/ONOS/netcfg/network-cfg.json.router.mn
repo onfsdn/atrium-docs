@@ -1,0 +1,51 @@
+{
+     "devices" : {
+	  "of:0000000000000001" : {
+	      "basic" : {
+	      	      "driver" : "softrouter"
+		}
+	  }
+    },
+
+
+    "ports" : {
+	"of:0000000000000001/1" : {
+	    "interfaces" : [
+		{
+		    "ips" : [ "192.168.10.101/24" ],
+		    "mac" : "00:00:00:00:00:01",
+		    "vlan" : "100"
+		}
+	    ]
+	},
+	"of:0000000000000001/2" : {
+	    "interfaces" : [
+		{
+		    "ips" : [ "192.168.20.101/24" ],
+		    "mac" : "00:00:00:00:00:02"
+		}
+	    ]
+	}
+    },
+    "apps" : {
+	"org.onosproject.router" : {
+	    "bgp" : {
+		"bgpSpeakers" : [
+		    {
+			"connectPoint" : "of:0000000000000001/3",
+			"peers" : [
+			    "192.168.10.1",
+			    "192.168.20.1"
+			]
+		    }
+		]
+	    },
+	    "router" : {
+		"controlPlaneConnectPoint" : "of:0000000000000001/3",
+		"ospfEnabled" : "true",
+		"pimEnabled" : "true"
+	    }		
+    	}
+    }
+}		
+		

@@ -1,0 +1,42 @@
+{
+    "ports" : {
+	"of:0000000011223344/12" : {
+	    "interfaces" : [
+		{
+		    "ips" : [ "192.168.10.101/24" ],
+		    "mac" : "00:00:00:00:00:01",
+		    "vlan" : "100"
+		}
+	    ]
+	},
+	"of:0000000011223344/24" : {
+	    "interfaces" : [
+		{
+		    "ips" : [ "192.168.20.101/24" ],
+		    "mac" : "00:00:00:00:00:02"
+		}
+	    ]
+	}
+    },
+    "apps" : {
+	"org.onosproject.router" : {
+	    "bgp" : {
+		"bgpSpeakers" : [
+		    {
+			"connectPoint" : "of:0000000011223344/48",
+			"peers" : [
+			    "192.168.10.1",
+			    "192.168.20.1"
+			]
+		    }
+		]
+	    },
+	    "router" : {
+		"controlPlaneConnectPoint" : "of:0000000011223344/48",
+		"ospfEnabled" : "true",
+		"pimEnabled" : "true"
+	    }		
+    	}
+    }
+}		
+		
